@@ -5,6 +5,7 @@ class EmailReader(object):
             self._client = client
         except Exception as e:
             raise e
+    
     def read(self, search_str):
         try:
             email_ids = self._client.search(search_str)

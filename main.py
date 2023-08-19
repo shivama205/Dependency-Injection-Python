@@ -6,5 +6,6 @@ if __name__ == "__main__":
         "password": "YOUR_PASSWORD",
         "mailbox": "INBOX"
     })
+    
     email_reader = Readers.email_reader()
     print email_reader.read('(SUBJECT TestSubject)')
