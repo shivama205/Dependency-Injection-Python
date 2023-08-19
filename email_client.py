@@ -10,6 +10,7 @@ class EmailClient(object):
             self.mailbox(config.get('mailbox'))
         except Exception as e:
             raise e
+        
     def mailbox(self, mailbox_name):
         try:
             rv, data = self._client.select(mailbox_name)
@@ -26,6 +27,7 @@ class EmailClient(object):
             return data[0].split()
         except Exception as e:
             raise e
+        
     def get_email(self, email_id):
         try:
             rv, data = self._client.fetch(email_id, '(RFC822)')
@@ -34,6 +36,7 @@ class EmailClient(object):
             return data[0][1]
         except Exception as e:
             raise e
+        
 def search(self, search_str):
         try:
             print search_str
@@ -43,6 +46,7 @@ def search(self, search_str):
             return data[0].split()
         except Exception as e:
             raise e
+        
 def get_email(self, email_id):
         try:
             rv, data = self._client.fetch(email_id, '(RFC822)')
